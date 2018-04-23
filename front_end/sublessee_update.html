@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+body {
+  margin: 0;
+  background-image: url("apt-up.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-style-9{
+    max-width: 450px;
+    background: #FAFAFA;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 6px solid #305A72;
+}
+.form-style-9 ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+.form-style-9 ul li{
+    display: block;
+    margin-bottom: 10px;
+    min-height: 35px;
+}
+.form-style-9 ul li  .field-style{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #B0CFE0;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+
+}.form-style-9 ul li  .field-style:focus{
+    box-shadow: 0 0 5px #B0CFE0;
+    border:1px solid #B0CFE0;
+}
+.form-style-9 ul li .field-split{
+    width: 49%;
+}
+.form-style-9 ul li .field-full{
+    width: 100%;
+}
+.form-style-9 ul li input.align-left{
+    float:left;
+}
+.form-style-9 ul li input.align-right{
+    float:right;
+}
+.form-style-9 ul li textarea{
+    width: 100%;
+    height: 100px;
+}
+.form-style-9 ul li input[type="button"],
+.form-style-9 ul li input[type="submit"] {
+    -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+    box-shadow: inset 0px 1px 0px 0px #3985B1;
+    background-color: #216288;
+    border: 1px solid #17445E;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 8px 18px;
+    text-decoration: none;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+.form-style-9 ul li input[type="button"]:hover,
+.form-style-9 ul li input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+    background-color: #28739E;
+}
+</style>
+
+
+
+
+<form class="form-style-9" action ="update1.php" method="GET">
+
+  <p><font size="4" color=#E74C3C> ID </font>
+  <input type="text" name="ID"><br>
+  <p><font size="4" color=#E74C3C> Password </font>
+  <input type="text" name="Passwords"><br>
+
+<label style="font-size: 30px;"><font color="darkorange"> Sublessee </font></label>
+    <br />
+  <input type="checkbox" name="type1" value="Price_Lower"> Price_Lower
+    <input type="text" name="Price_Lower"><br>
+  <input type="checkbox" name="type2" value="Price_Upper"> Price_Upper
+    <input type="text" name="Price_Upper"><br>
+  <input type="checkbox" name="type3" value="Location"> Location
+    <input type="text" name="Location" ><br>
+  <input type="checkbox" name="type4" value="Floor_plan"> Floor_plan
+    <input type="text" name="Floor_plan" ><br>
+  <input type="checkbox" name="type5" value="Facilities"> Facilities
+    <input type="text" name="Facilities"><br>
+  <input type="checkbox" name="type6" value="Address"> Address
+    <input type="text" name="Address"><br>
+  <input type="checkbox" name="type7" value="prefered_distance"> prefered_distance
+    <input type="text" name="prefered_distance"><br>
+  <input type="checkbox" name="type8" value="Number_of_units_want"> Number_of_units
+    <input type="text" name="Number_of_units_want" ><br>
+  <input type="checkbox" name="type9" value="Additional_info"> Additional_info
+    <input type="text" name="Additional_info" ><br> </p>
+  <button type="submit" name="submit"> Submit </button>
+
+</form>
+<br />
+<br />
+</html>
+
