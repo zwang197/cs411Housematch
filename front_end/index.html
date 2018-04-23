@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+view raw
+* {box-sizing: border-box;}
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: orange;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 45px;
+    text-align: center;
+    background: #F0F3F4;
+    opacity : 0.6;
+    color:#AF601A;
+}
+
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 50px;
+}
+
+body {
+  margin: 0;
+  background-image: url("apt.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.button {
+    background-color: #909497; 
+    border: none;
+    color: black;
+    background:#F2F3F4;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {font-size: 15px;}
+
+div.mid {
+    margin:auto;
+    width: 58%;
+    text-align: center;
+    border: 3px white;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    font-family: "Arial", Sans-serif;
+    background:#D0D3D4;
+    opacity:0.8;
+  }
+ 
+.topnav {
+  overflow: hidden;
+  background-color: #E5E7E9;
+  opacity:0.8;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #E59866;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  opacity:0.9;
+}
+
+.active {
+  background-color: #E5E7E9;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: #E59866;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: orange;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #99A3A4;
+  color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #99A3A4;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+</style>
+
+<div class="header">
+  <h1>Housematch</h1>
+  <p>CS411 Project Group 25</p>
+</div>
+
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<div class="topnav">
+  <a class="active" href=" ">Home</a >
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Sign Up</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="sublessee_signup.html">Sublesse</a>
+        <a href="sublessor_signup.html">Sublessor</a>
+        <a href="roommate_signup.html">Roommate Match</a>
+  </div>
+</div>
+    <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Update</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="sublessee_update.html">Sublesse</a >
+        <a href="sublessor_update.html">Sublessor</a >
+        <a href="roommate_update.html">Roommate Match</a >
+        <a href="delete_update.html">Delete</a >
+  </div>
+ </div>
+ <a class="active" href="recommend.html">Recommend</a >
+ <a class="active" href="analysis.html">Analysis</a >
+  </div>
+
+
+<div class=mid>
+<br>
+<form name="myForm" action="/search.php" method="post">
+Floor Plan:
+<select name="num_bedroom">
+    <option value="any"> Any </option>
+    <option value="1b1br" > One </option>
+    <option value="2b2br"> Two </option>
+    <option value="3b3br"> Three </option>
+    <option value="4b4br"> Four </option>
+</select>
+
+Location:
+<select name="Location" >
+    <option value="Champaign"> Champaign </option>
+    <option value="Urbana"> Urbana </option>
+</select>
+
+Distance to Downtown:
+<select name="Distance" >
+    <option value="any"> Any </option>
+    <option value="1"> One </option>
+    <option value="2"> Two </option>
+    <option value="3"> Three </option>
+    <option value="3+"> Above Three </option>
+</select>
+
+Monthly Rent:
+<select name="monthly_rent">
+    <option value="any"> Any </option>
+    <option value="500"> Less Than $500 </option>
+    <option value="700"> $500-$700 </option>
+    <option value="800"> $700-$800 </option>
+    <option value="1000"> $800-$1000 </option>
+    <option value="1000+"> >$1000 </option>
+</select>
+<!--<button type="button" onclick="display()">Submit</button> -->
+<br>
+
+<input class="button button1" type="submit" value="Submit">
+<input class="button button1" type="reset" value = "Reset">
+</form>
+</div>
+
+</body>
+</html>
